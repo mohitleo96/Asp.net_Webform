@@ -11,7 +11,7 @@ namespace LoginFormDemo
 {
     public partial class LoginWebForm1 : System.Web.UI.Page
     {
-        string cs = ConfigurationManager.ConnectionStrings["loginDbConnection"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,7 +20,7 @@ namespace LoginFormDemo
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cs);
-            string query = "select * from LoginTable where Username = @user and Password = @pass";
+            string query = "select * from SignUpTable where Username = @user and Password = @pass";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@user", UserNameTextBox.Text);
             cmd.Parameters.AddWithValue("@pass", PassTextBox.Text);

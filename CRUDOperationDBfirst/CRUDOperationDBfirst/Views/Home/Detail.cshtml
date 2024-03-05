@@ -1,0 +1,42 @@
+﻿@model CRUDOperationDBfirst.Employee
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpCity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Empid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

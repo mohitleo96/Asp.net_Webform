@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRUDDBFirstModelStoreContainer" CdmEntityContainer="CRUDDBFirstDBContext">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="CRUDDBFirstModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Empid" ColumnName="Empid" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpSalary" ColumnName="EmpSalary" />
+          <ScalarProperty Name="EmpCity" ColumnName="EmpCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
